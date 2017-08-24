@@ -65,7 +65,7 @@
             <li class="dropdown">
               <a href="<c:url value='/bbs/notice/NoticeList.jsp'/>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">공지사항 <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">공지사항 등록</a></li>
+                <li><a href="<c:url value='/bbs/notice/NoticeWrite.jsp'/>">공지사항 등록</a></li>
                 <li class="active"><a href="<c:url value='/bbs/notice/NoticeList.jsp'/>">공지사항 목록</a></li>
                 <li><a href="#">자주하는 질문</a></li>
                 <li><a href="#">문의사항</a></li>
@@ -121,6 +121,7 @@
 						<td>Larry</td>
 						<td>the Bird</td>
 						<td>10100</td>
+						<td>2017-08-09</td>
 						<td><a href="#">수정</a> | <a href="#">삭제</a></td>
 					</tr>
 				</tbody>

@@ -89,40 +89,32 @@
 		</div>
 		<!-- 아래에 실제내용 표시 -->
 		<div>
-			<button type="button" class="btn btn-sm btn-info">확인</button>
-			<div class="col-md-6">
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th>글번호</th>
-							<th>분류</th>
-							<th>제목</th>
-							<th>조회수</th>
-							<th>작성일</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>제목1</td>
-							<td>가길동</td>
-							<td></td>
-							<td>2017-08-09</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>@fat</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>Larry</td>
-							<td>the Bird</td>
-							<td>@twitter</td>
-						</tr>
-					</tbody>
+			<div >
+			<form action="NoticeWriteOk.jsp" method="post">
+				<table class="table table-striped" style="">
+					<tr>
+						<td>분류</td>
+						<td><select name="Notice_category">
+							<option value="">분류</option>
+							<option value="service news">서비스 소식</option>
+							<option value="service open">서비스 오픈</option>
+							<option value="service end">서비스 종료</option>
+							<option value="service check">서비스 점검</option>
+							<option value="guide">안내</option>
+						</select></td>					
+					</tr>
+					<tr><td>제목</td>
+						<td><input type="text" name="title" size="98"/></td></tr>
+					<tr>
+						<td>내용</td>
+						<td><textarea cols="100" rows="20" name="content"></textarea>
+						</td>
+					</tr>
+					<tr align="center">
+					<td colspan="50"><input type="submit" class="btn-default" value="등록"/></td>	
+					</tr>				
 				</table>
+				</form>
 			</div>
 		</div>
 	</div>
