@@ -44,7 +44,7 @@
               </ul>
             </li>
             <li><a href="#contact">최신</a></li>
-            <li class="active"><a href="<c:url value='/bbs/chartofsong/genre/Balad.jsp'/>">장르</a></li>            
+            <li class="active"><a href="<c:url value='/bbs/genre/kpop/Balad.jsp'/>">장르</a></li>            
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">멜론TV<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
