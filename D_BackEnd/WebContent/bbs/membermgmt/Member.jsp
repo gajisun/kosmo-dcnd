@@ -39,7 +39,7 @@
               <a href="<c:url value='/bbs/chartofsong/top100/Daily.jsp'/>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">멜론 차트<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="<c:url value='/bbs/chartofsong/top100/Daily.jsp'/>">TOP100</a></li>
-                <li><a href="#">시대별 차트</a></li>
+                <li><a href="<c:url value='/bbs/chartofsong/times/2000.jsp'/>">시대별 차트</a></li>
                 <!-- <li class="divider"></li>  -->
               </ul>
             </li>
