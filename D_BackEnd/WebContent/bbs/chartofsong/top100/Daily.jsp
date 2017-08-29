@@ -29,7 +29,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">GrapeFruits 관리자페이지</a>
+          <a class="navbar-brand" href="#">Zamong 관리자페이지</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -49,7 +49,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">멜론TV<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">영상등록</a></li>
-                <li><a href="#">뮤직비디오</a></li>
+                <li><a href="<c:url value = '/bbs/melontv/MusicVideo.jsp'/>">뮤직비디오</a></li>
                 <li><a href="#">방송</a></li>
                 <!-- <li class="divider"></li>  -->
               </ul>
@@ -93,38 +93,61 @@
       		</ul>
       	</div>
 		<div>
-			<button type="button" class="btn btn-sm btn-info">확인</button>
-			<div class="col-md-6">
+			<button type="button" class="btn btn-default">음원 등록</button>
+			<div>
 				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th>글번호</th>
-							<th>제목</th>
-							<th>작성자</th>
-							<th>작성일</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>제목1</td>
-							<td>가길동</td>
-							<td>2017-08-09</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>@fat</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>Larry</td>
-							<td>the Bird</td>
-							<td>@twitter</td>
-						</tr>
-					</tbody>
-				</table>
+				<thead>
+					<tr>
+						<th>NO</th>
+						<th>음원</th>
+						<th>가수</th>
+						<th>앨범</th>
+						<th>좋아요</th>
+						<th>듣기</th>
+						<th>담기</th>
+						<th>다운</th>
+						<th>뮤비</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>울보의 사랑</td>
+						<td>란(RAN)</td>
+						<td>울보의 사랑</td>
+						<td>좋아요 48</td>
+						<td><input type="checkbox" class="listen" checked="checked"/>듣기</td>
+						<td><input type="checkbox" class="putlist" checked="checked"/>담기</td>
+						<td><input type="checkbox" class="download" />다운</td>
+						<td><input type="checkbox" class="musicvideo" />뮤비</td>
+						<td><button type="button" class="btn btn-sm btn-info">저장</button></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>완벽한 사랑</td>
+						<td>시와</td>
+						<td>완벽한 사랑</td>
+						<td>좋아요 51</td>
+						<td><input type="checkbox" class="listen" checked="checked"/>듣기</td>
+						<td><input type="checkbox" class="putlist" checked="checked"/>담기</td>
+						<td><input type="checkbox" class="download" />다운</td>
+						<td><input type="checkbox" class="musicvideo" />뮤비</td>
+						<td><button type="button" class="btn btn-sm btn-info">저장</button></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>This night</td>
+						<td>시우(XIU)</td>
+						<td>This night</td>
+						<td>좋아요 3</td>
+						<td><input type="checkbox" class="listen" checked="checked"/>듣기</td>
+						<td><input type="checkbox" class="putlist" checked="checked"/>담기</td>
+						<td><input type="checkbox" class="download" />다운</td>
+						<td><input type="checkbox" class="musicvideo" />뮤비</td>
+						<td><button type="button" class="btn btn-sm btn-info">저장</button></td>
+					</tr>
+				</tbody>
+			</table>
 			</div>
 		</div>
 	</div>

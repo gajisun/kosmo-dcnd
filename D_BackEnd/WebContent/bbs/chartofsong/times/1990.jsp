@@ -10,7 +10,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<link rel="icon" href="<c:url value='/Image/자몽.jpg'/>"/>
 	
-    <title>Top 100</title>
+    <title>시대별 차트</title>
     <!-- Bootstrap core CSS -->
     <!-- 합쳐지고 최소화된 최신 CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -35,11 +35,11 @@
           <ul class="nav navbar-nav">
             <li><a href="<c:url value='/bbs/Main.jsp'/>">홈</a></li>
             <li><a href="<c:url value='/bbs/membermgmt/Member.jsp'/>">회원관리</a></li>
-            <li class="dropdown;active">
+            <li class="dropdown active">
               <a href="<c:url value='/bbs/chartofsong/top100/Daily.jsp'/>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">멜론 차트<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li class="active"><a href="<c:url value='/bbs/chartofsong/top100/Daily.jsp'/>">TOP100</a></li>
-                <li><a href="<c:url value='/bbs/chartofsong/times/2000.jsp'/>">시대별 차트</a></li>
+                <li><a href="<c:url value='/bbs/chartofsong/top100/Daily.jsp'/>">TOP100</a></li>
+                <li class="active"><a href="<c:url value='/bbs/chartofsong/times/2000.jsp'/>">시대별 차트</a></li>
                 <!-- <li class="divider"></li>  -->
               </ul>
             </li>
@@ -63,7 +63,7 @@
               </ul>
             </li>
             <li class="dropdown">
-             <a href="<c:url value='/bbs/notice/NoticeList.jsp'/>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">공지사항 <span class="caret"></span></a>
+              <a href="<c:url value='/bbs/notice/NoticeList.jsp'/>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">공지사항 <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="<c:url value='/bbs/notice/NoticeWrite.jsp'/>">공지사항 등록</a></li>
                 <li><a href="<c:url value='/bbs/notice/NoticeList.jsp'/>">공지사항 목록</a></li>
@@ -80,20 +80,20 @@
 
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron">
-			<h1>자몽차트</h1>
+			<h1>시대별 차트</h1>
 		</div>
 
 		<!-- 실제내용의 제목표시 -->
 		<div class="page-header">
-		<!-- 아래에 실제내용 표시 -->
 			<ul class="nav nav-tabs" role="tablist">
-        		<li role="presentation"><a href="<c:url value='/bbs/chartofsong/top100/Daily.jsp'/>">일간</a></li>
-        		<li role="presentation"><a href="<c:url value='/bbs/chartofsong/top100/Weekly.jsp'/>">주간</a></li>
-        		<li role="presentation" class="active"><a href="<c:url value='/bbs/chartofsong/top100/Monthly.jsp'/>">월간</a></li>
+        		<li role="presentation" class="active"><a href="<c:url value='/bbs/chartofsong/times/2010.jsp'/>">2010년대</a></li>
+        		<li role="presentation"><a href="<c:url value='/bbs/chartofsong/times/2000.jsp'/>">2000년대</a></li>
+        		<li role="presentation"><a href="<c:url value='/bbs/chartofsong/times/1990.jsp'/>">1990년대</a></li>
       		</ul>
-      	</div>
-
+		</div>
 		<!-- 아래에 실제내용 표시 -->
+		<h2>1990년대</h2>
+		
 		<div>
 			<button type="button" class="btn btn-default">음원 등록</button>
 			<div>

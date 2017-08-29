@@ -29,7 +29,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">GrapeFruits 관리자페이지</a>
+          <a class="navbar-brand" href="#">Zamong 관리자페이지</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -49,7 +49,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">멜론TV<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">영상등록</a></li>
-                <li><a href="#">뮤직비디오</a></li>
+                <li><a href="<c:url value = '/bbs/melontv/MusicVideo.jsp'/>">뮤직비디오</a></li>
                 <li><a href="#">방송</a></li>
                 <!-- <li class="divider"></li>  -->
               </ul>

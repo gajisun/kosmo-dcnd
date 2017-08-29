@@ -16,6 +16,11 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	<!-- 부가적인 테마(Bootstrap theme) -->
 	<link rel="stylesheet" href="<c:url value='/bootstrap/css/bootstrap-theme.min.css'/>">
+	<style type="text/css">
+	.text-center tr th, .text-center tr td {
+		text-align: center;
+	}
+	</style>
   </head>
 
   <body role="document">
@@ -44,12 +49,12 @@
               </ul>
             </li>
             <li><a href="#contact">최신</a></li>
-            <li><a href="<c:url value='/bbs/genre/kpop/Balad.jsp'/>">장르</a></li>
+            <li><a href="<c:url value='/bbs/chartofsong/genre/Balad.jsp'/>">장르</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">멜론TV<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">영상등록</a></li>
-                <li><a href="#">뮤직비디오</a></li>
+                <li><a href="<c:url value = '/bbs/melontv/MusicVideo.jsp'/>">뮤직비디오</a></li>
                 <li><a href="#">방송</a></li>
                 <!-- <li class="divider"></li>  -->
               </ul>
@@ -63,10 +68,10 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="<c:url value='/bbs/notice/NoticeList.jsp'/>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">공지사항 <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">공지사항 <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="<c:url value='/bbs/notice/NoticeWrite.jsp'/>">공지사항 등록</a></li>
-                <li><a href="<c:url value='/bbs/notice/NoticeList.jsp'/>">공지사항 목록</a></li>
+                <li><a href="#">공지사항 등록</a></li>
+                <li><a href="#">공지사항 목록</a></li>
                 <li><a href="#">자주하는 질문</a></li>
                 <li><a href="#">문의사항</a></li>
               </ul>
@@ -89,39 +94,63 @@
 		</div>
 		<!-- 아래에 실제내용 표시 -->
 		<div>
-			<button type="button" class="btn btn-sm btn-info">확인</button>
-			<div class="col-md-6">
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th>글번호</th>
-							<th>제목</th>
-							<th>작성자</th>
-							<th>작성일</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>제목1</td>
-							<td>가길동</td>
-							<td>2017-08-09</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>@fat</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>Larry</td>
-							<td>the Bird</td>
-							<td>@twitter</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+			<table class="table table-striped"  >
+				<thead class="text-center">
+					<tr>
+						<th>회원번호</th>
+						<th>아이디</th>
+						<th>이름</th>
+						<th>닉네임</th>
+						<th>성별</th>
+						<th>생년월일</th>
+						<th>이메일</th>
+						<th>주소</th>
+						<th>보유캐쉬</th>
+						<th>회원등급</th>
+					</tr>
+				</thead>
+				<tbody class="text-center">
+					<tr>
+						<td>1</td>
+						<td>KIMGILDONG</td>
+						<td>김길동</td>
+						<td>닉넴김길동</td>
+						<td>남</td>
+						<td>2017-08-24</td>
+						<td>kimgildong@naver.com</td>
+						<td>서울 가산동</td>
+						<td>10000캐쉬</td>
+						<td>준회원</td>
+						<td><button type="button" class="btn btn-sm btn-info">탈퇴</button></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>LEEGILDONG</td>
+						<td>이길동</td>
+						<td>닉넴이길동</td>
+						<td>여</td>
+						<td>2017-08-24</td>
+						<td>leegildong@naver.com</td>
+						<td>강원도 춘천</td>
+						<td>50000캐쉬</td>
+						<td>정회원</td>
+						<td><button type="button" class="btn btn-sm btn-info">탈퇴</button></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>DOGILDONG</td>
+						<td>도길동</td>
+						<td>닉넴도길동</td>
+						<td>남</td>
+						<td>2017-08-24</td>
+						<td>dogildong@naver.com</td>
+						<td>부산 해운대</td>
+						<td>100000캐쉬</td>
+						<td>정회원</td>
+						<td><button type="button" class="btn btn-sm btn-info">탈퇴</button></td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
 	<!-- /container(내용 끝) -->

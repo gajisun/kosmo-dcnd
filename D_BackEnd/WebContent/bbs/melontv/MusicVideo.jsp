@@ -10,12 +10,17 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<link rel="icon" href="<c:url value='/Image/자몽.jpg'/>"/>
 	
-    <title>Top 100</title>
+    <title>DCND BackEnd 회원관리 페이지</title>
     <!-- Bootstrap core CSS -->
     <!-- 합쳐지고 최소화된 최신 CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	<!-- 부가적인 테마(Bootstrap theme) -->
 	<link rel="stylesheet" href="<c:url value='/bootstrap/css/bootstrap-theme.min.css'/>">
+	<style type="text/css">
+	.text-center tr th, .text-center tr td {
+		text-align: center;
+	}
+	</style>
   </head>
 
   <body role="document">
@@ -29,16 +34,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Zamong 관리자페이지</a>
+          <a class="navbar-brand" href="#">GrapeFruits 관리자페이지</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="<c:url value='/bbs/Main.jsp'/>">홈</a></li>
             <li><a href="<c:url value='/bbs/membermgmt/Member.jsp'/>">회원관리</a></li>
-            <li class="dropdown;active">
+            <li class="dropdown">
               <a href="<c:url value='/bbs/chartofsong/top100/Daily.jsp'/>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">멜론 차트<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li class="active"><a href="<c:url value='/bbs/chartofsong/top100/Daily.jsp'/>">TOP100</a></li>
+                <li><a href="<c:url value='/bbs/chartofsong/top100/Daily.jsp'/>">TOP100</a></li>
                 <li><a href="<c:url value='/bbs/chartofsong/times/2000.jsp'/>">시대별 차트</a></li>
                 <!-- <li class="divider"></li>  -->
               </ul>
@@ -49,7 +54,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">멜론TV<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">영상등록</a></li>
-                <li><a href="<c:url value = '/bbs/melontv/MusicVideo.jsp'/>">뮤직비디오</a></li>
+                <li class="active"><a href="<c:url value = '/bbs/melontv/MusicVideo.jsp'/>">뮤직비디오</a></li>
                 <li><a href="#">방송</a></li>
                 <!-- <li class="divider"></li>  -->
               </ul>
@@ -63,10 +68,10 @@
               </ul>
             </li>
             <li class="dropdown">
-             <a href="<c:url value='/bbs/notice/NoticeList.jsp'/>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">공지사항 <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">공지사항 <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="<c:url value='/bbs/notice/NoticeWrite.jsp'/>">공지사항 등록</a></li>
-                <li><a href="<c:url value='/bbs/notice/NoticeList.jsp'/>">공지사항 목록</a></li>
+                <li><a href="#">공지사항 등록</a></li>
+                <li><a href="#">공지사항 목록</a></li>
                 <li><a href="#">자주하는 질문</a></li>
                 <li><a href="#">문의사항</a></li>
               </ul>
@@ -80,77 +85,74 @@
 
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron">
-			<h1>자몽차트</h1>
+			<h1>뮤직비디오 관리 페이지</h1>
 		</div>
 
 		<!-- 실제내용의 제목표시 -->
 		<div class="page-header">
-		<!-- 아래에 실제내용 표시 -->
-			<ul class="nav nav-tabs" role="tablist">
-        		<li role="presentation"><a href="<c:url value='/bbs/chartofsong/top100/Daily.jsp'/>">일간</a></li>
-        		<li role="presentation"><a href="<c:url value='/bbs/chartofsong/top100/Weekly.jsp'/>">주간</a></li>
-        		<li role="presentation" class="active"><a href="<c:url value='/bbs/chartofsong/top100/Monthly.jsp'/>">월간</a></li>
-      		</ul>
-      	</div>
-
+			<h1>뮤비 목록</h1>
+		</div>
 		<!-- 아래에 실제내용 표시 -->
 		<div>
-			<button type="button" class="btn btn-default">음원 등록</button>
-			<div>
-				<table class="table table-striped">
-				<thead>
+			<table class="table table-striped"  >
+				<thead class="text-center">
 					<tr>
-						<th>NO</th>
-						<th>음원</th>
+						<th>뮤비코드</th>
+						<th>제목</th>
 						<th>가수</th>
-						<th>앨범</th>
+						<th>뮤비경로</th>
 						<th>좋아요</th>
-						<th>듣기</th>
-						<th>담기</th>
-						<th>다운</th>
-						<th>뮤비</th>
+						<th>조회수</th>
+						<th>등록일</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody class="text-center">
 					<tr>
 						<td>1</td>
-						<td>울보의 사랑</td>
-						<td>란(RAN)</td>
-						<td>울보의 사랑</td>
-						<td>좋아요 48</td>
-						<td><input type="checkbox" class="listen" checked="checked"/>듣기</td>
-						<td><input type="checkbox" class="putlist" checked="checked"/>담기</td>
-						<td><input type="checkbox" class="download" />다운</td>
-						<td><input type="checkbox" class="musicvideo" />뮤비</td>
-						<td><button type="button" class="btn btn-sm btn-info">저장</button></td>
+						<td>빨간맛</td>
+						<td>레드벨벳</td>
+						<td>https://www.youtube.com/watch?v=WyiIGEHQP8o</td>
+						<td>좋아요 1000</td>
+						<td>조회수 10,000,000</td>
+						<td>2017-08-24</td>
+						<td><button type="button" class="btn btn-sm btn-info">수정</button></td>
+						<td><button type="button" class="btn btn-sm btn-info">삭제</button></td>
 					</tr>
 					<tr>
 						<td>2</td>
-						<td>완벽한 사랑</td>
-						<td>시와</td>
-						<td>완벽한 사랑</td>
-						<td>좋아요 51</td>
-						<td><input type="checkbox" class="listen" checked="checked"/>듣기</td>
-						<td><input type="checkbox" class="putlist" checked="checked"/>담기</td>
-						<td><input type="checkbox" class="download" />다운</td>
-						<td><input type="checkbox" class="musicvideo" />뮤비</td>
-						<td><button type="button" class="btn btn-sm btn-info">저장</button></td>
+						<td>마지막처럼</td>
+						<td>블랙핑크</td>
+						<td>https://www.youtube.com/watch?v=Amq-qlqbjYA</td>
+						<td>좋아요 1000</td>
+						<td>조회수 10,000,000</td>
+						<td>2017-08-24</td>
+						<td><button type="button" class="btn btn-sm btn-info">수정</button></td>
+						<td><button type="button" class="btn btn-sm btn-info">삭제</button></td>
 					</tr>
 					<tr>
 						<td>3</td>
-						<td>This night</td>
-						<td>시우(XIU)</td>
-						<td>This night</td>
-						<td>좋아요 3</td>
-						<td><input type="checkbox" class="listen" checked="checked"/>듣기</td>
-						<td><input type="checkbox" class="putlist" checked="checked"/>담기</td>
-						<td><input type="checkbox" class="download" />다운</td>
-						<td><input type="checkbox" class="musicvideo" />뮤비</td>
-						<td><button type="button" class="btn btn-sm btn-info">저장</button></td>
+						<td>HAPPY</td>
+						<td>우주소녀</td>
+						<td>https://www.youtube.com/watch?v=sZVB_zCBlCU</td>
+						<td>좋아요 1000</td>
+						<td>조회수 10,000,000</td>
+						<td>2017-08-24</td>
+						<td><button type="button" class="btn btn-sm btn-info">수정</button></td>
+						<td><button type="button" class="btn btn-sm btn-info">삭제</button></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Why Don’t You Know</td>
+						<td>청하</td>
+						<td>https://www.youtube.com/watch?v=EHgeGRU3wDI</td>
+						<td>좋아요 1000</td>
+						<td>조회수 10,000,000</td>
+						<td>2017-08-24</td>
+						<td><button type="button" class="btn btn-sm btn-info">수정</button></td>
+						<td><button type="button" class="btn btn-sm btn-info">삭제</button></td>
 					</tr>
 				</tbody>
 			</table>
-			</div>
 		</div>
 	</div>
 	<!-- /container(내용 끝) -->

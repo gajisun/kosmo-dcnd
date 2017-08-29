@@ -29,14 +29,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">GrapeFruits 관리자페이지</a>
+          <a class="navbar-brand" href="#">Zamong 관리자페이지</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="<c:url value='/bbs/Main.jsp'/>">홈</a></li>
             <li><a href="<c:url value='/bbs/membermgmt/Member.jsp'/>">회원관리</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">멜론 차트<span class="caret"></span></a>
+              <a href="<c:url value='/bbs/chartofsong/top100/Daily.jsp'/>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">멜론 차트<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="<c:url value='/bbs/chartofsong/top100/Daily.jsp'/>">TOP100</a></li>
                 <li><a href="<c:url value='/bbs/chartofsong/times/2000.jsp'/>">시대별 차트</a></li>
@@ -49,7 +49,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">멜론TV<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">영상등록</a></li>
-                <li><a href="#">뮤직비디오</a></li>
+                <li><a href="<c:url value = '/bbs/melontv/MusicVideo.jsp'/>">뮤직비디오</a></li>
                 <li><a href="#">방송</a></li>
                 <!-- <li class="divider"></li>  -->
               </ul>
@@ -85,9 +85,14 @@
 
 		<!-- 실제내용의 제목표시 -->
 		<div class="page-header">
-			<h1>발라드 차트</h1>
+			<ul class="nav nav-pills">
+  				<li role="presentation" class="active"><a href="<c:url value='/bbs/genre/kpop/Balad.jsp'/>">발라드</a></li>
+  				<li role="presentation"><a href="<c:url value='/bbs/genre/kpop/Dance.jsp'/>">댄스</a></li>
+  				<li role="presentation"><a href="<c:url value='/bbs/genre/kpop/RapHiphop.jsp'/>">Rap&Hiphop</a></li>
+			</ul>
 		</div>
 		<!-- 아래에 실제내용 표시 -->
+		<button type="submit" class="btn btn-default">음원 등록</button>
 		<div>
 			<table class="table table-striped">
 				<thead>
